@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:my_flutter/remitance.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter ViewController',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -51,7 +52,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _routeToViewController() async {
   
-    SystemNavigator.pop(animated: false);
+    // SystemNavigator.pop(animated: false);
+    SystemChannels.platform.invokeMethod('SystemNavigator.pop');
     try {
       final bool result = await platform.invokeMethod('routeToSecondViewController');
       if (result) {
@@ -113,6 +115,46 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
             FlatButton(
               color: Colors.blue,
               textColor: Colors.white,
@@ -127,6 +169,96 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemitanceView()),
+                );
+              },
+              child: Text('Go to remitance!'),
             ),
           ],
         ),
